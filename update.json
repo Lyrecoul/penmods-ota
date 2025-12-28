@@ -6,7 +6,7 @@
       "note": "更新测试",
       "size": 1234567,
       "download": "https://cdn.jsdelivr.net/gh/lyrecoul/penmods-ota@v2.0.0/update_v2.0.0.zip",
-      "md5": "你的zip文件md5值",
+      "md5": "acd6eb04fc8b4eb99dfabac02a463fb5",
       "next": [2, 0, 1]
     }
   ]
