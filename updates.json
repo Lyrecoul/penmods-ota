@@ -21,6 +21,13 @@
       "size": 3464446,
       "download": "https://cdn.jsdelivr.net/gh/lyrecoul/penmods-ota@v2.3.1/update_v2.3.1.zip",
       "md5": "7cd7105b08f1325fcb124247819a5816"
+    },
+    {
+      "version": [2, 3, 2],
+      "note": "2.3.2：新增自建词典 —— 把做好的 .dat 容器放进 /userdisk/PenMods/dicts/，查词结果页最上方就会出现你自己的词典分区，支持发音与分词条浏览（更多设置 → 扫描查询 → 自定义词典），放入新词典无需重启；配套工具 tools/dict-probe 的说明文档已改为中文。",
+      "size": 3490918,
+      "download": "https://cdn.jsdelivr.net/gh/lyrecoul/penmods-ota@v2.3.2/update_v2.3.2.zip",
+      "md5": "64e514933ff7a9fda8acf5c46ff02fd5"
     }
   ]
 }
