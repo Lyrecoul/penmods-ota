@@ -14,6 +14,13 @@
       "size": 3457691,
       "download": "https://cdn.jsdelivr.net/gh/lyrecoul/penmods-ota@v2.3.0/update_v2.3.0-r1.zip",
       "md5": "0be68431f19e8bfa117863a512fb4c07"
+    },
+    {
+      "version": [2, 3, 1],
+      "note": "2.3.1 修复版：修复插件媒体会话的三个问题 —— end() 缺少属主校验（被接管的旧插件会误关新属主的会话）；C ABI 会话句柄因地址复用导致陈旧句柄仍然有效（改为整数令牌）；新增 onSessionRevoked 回调，让被接管的 C 插件能被通知。同时让 .loading 崩溃自愈覆盖整个插件初始化过程（init_plugin_with_hook_api / init_plugin_with_media_api 里的崩溃此前会无限重启并触发 recovery）。",
+      "size": 3464446,
+      "download": "https://cdn.jsdelivr.net/gh/lyrecoul/penmods-ota@v2.3.1/update_v2.3.1.zip",
+      "md5": "7cd7105b08f1325fcb124247819a5816"
     }
   ]
 }
