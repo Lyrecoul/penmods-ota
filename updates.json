@@ -7,6 +7,13 @@
       "size": 1691570,
       "download": "https://cdn.jsdelivr.net/gh/lyrecoul/penmods-ota@v2.0.0/update_v2.0.0.zip",
       "md5": "acd6eb04fc8b4eb99dfabac02a463fb5"
+    },
+    {
+      "version": [2, 3, 0],
+      "note": "全新 2.3.0 版本：AI 助手支持多模态附件、联网搜索与工具调用；新增键盘设置（Rime 输入法管理与紧凑布局）与语音输入；音乐播放与快捷面板增强；插件系统新增媒体会话 API。",
+      "size": 3457691,
+      "download": "https://cdn.jsdelivr.net/gh/lyrecoul/penmods-ota@v2.3.0/update_v2.3.0-r1.zip",
+      "md5": "0be68431f19e8bfa117863a512fb4c07"
     }
   ]
 }
