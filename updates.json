@@ -2,32 +2,59 @@
   "status": 200,
   "versions": [
     {
-      "version": [2, 0, 0],
+      "version": [
+        2,
+        0,
+        0
+      ],
       "note": "更新测试",
       "size": 1691570,
       "download": "https://cdn.jsdelivr.net/gh/lyrecoul/penmods-ota@v2.0.0/update_v2.0.0.zip",
       "md5": "acd6eb04fc8b4eb99dfabac02a463fb5"
     },
     {
-      "version": [2, 3, 0],
+      "version": [
+        2,
+        3,
+        0
+      ],
       "note": "全新 2.3.0 版本：AI 助手支持多模态附件、联网搜索与工具调用；新增键盘设置（Rime 输入法管理与紧凑布局）与语音输入；音乐播放与快捷面板增强；插件系统新增媒体会话 API。",
       "size": 3457691,
       "download": "https://cdn.jsdelivr.net/gh/lyrecoul/penmods-ota@v2.3.0/update_v2.3.0-r1.zip",
       "md5": "0be68431f19e8bfa117863a512fb4c07"
     },
     {
-      "version": [2, 3, 1],
+      "version": [
+        2,
+        3,
+        1
+      ],
       "note": "2.3.1 修复版：修复插件媒体会话的三个问题 —— end() 缺少属主校验（被接管的旧插件会误关新属主的会话）；C ABI 会话句柄因地址复用导致陈旧句柄仍然有效（改为整数令牌）；新增 onSessionRevoked 回调，让被接管的 C 插件能被通知。同时让 .loading 崩溃自愈覆盖整个插件初始化过程（init_plugin_with_hook_api / init_plugin_with_media_api 里的崩溃此前会无限重启并触发 recovery）。",
       "size": 3464446,
       "download": "https://cdn.jsdelivr.net/gh/lyrecoul/penmods-ota@v2.3.1/update_v2.3.1.zip",
       "md5": "7cd7105b08f1325fcb124247819a5816"
     },
     {
-      "version": [2, 3, 2],
+      "version": [
+        2,
+        3,
+        2
+      ],
       "note": "2.3.2：新增自建词典 —— 把做好的 .dat 容器放进 /userdisk/PenMods/dicts/，查词结果页最上方就会出现你自己的词典分区，支持发音与分词条浏览（更多设置 → 扫描查询 → 自定义词典），放入新词典无需重启；配套工具 tools/dict-probe 的说明文档已改为中文。",
       "size": 3490918,
       "download": "https://cdn.jsdelivr.net/gh/lyrecoul/penmods-ota@v2.3.2/update_v2.3.2.zip",
       "md5": "64e514933ff7a9fda8acf5c46ff02fd5"
+    },
+    {
+      "version": [
+        2,
+        4,
+        0
+      ],
+      "note": "2.4.0：内嵌 FFmpeg 播放器 —— 视频不再交给独立的 mpv 进程，而是画进 Qt 场景图，因此跟随左右手旋转、可以叠加画面内控件与 ASS/LRC 外挂字幕，并支持 Rockchip MPP 硬解与 DMA-BUF 零拷贝；更多设置 → 系统微调 → 实验性功能新增「VPU 硬件解码」开关（给 boot 里的设备树打补丁启用 VPU，可随时开关、出厂镜像自动备份）。顺带修复：插件未部署时视频页仍按老方式拉起 mpv。播放器插件本体（libffmpegplayerplugin.so，约 12MB）不随 OTA 分发，需要用 scripts/deploy_ffmpeg_player.sh 单独部署。",
+      "size": 10155377,
+      "download": "https://cdn.jsdelivr.net/gh/lyrecoul/penmods-ota@v2.4.0/update_v2.4.0.zip",
+      "md5": "091de4016427721ed7081941ae9f08b0"
     }
   ]
 }
