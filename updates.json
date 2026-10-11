@@ -35,6 +35,13 @@
       "size": 10155377,
       "download": "https://cdn.jsdelivr.net/gh/lyrecoul/penmods-ota@v2.4.0/update_v2.4.0.zip",
       "md5": "091de4016427721ed7081941ae9f08b0"
+    },
+    {
+      "version": [2, 4, 1],
+      "note": "2.4.1 修复版：AI 助手公式渲染多项修复 —— 行内公式不再漏解析、大小统一、过长公式改为换行而不是整幅缩小、中文公式改用设备自带系统字体（不再随包分发字体）、缩放公式不再被裁掉两侧；只发图片不打字现在能发出去，编辑带图片的消息不再丢图，对话里的图片可以点开；播放器曲末自动切歌不再把播放页调回前台，扫描不再打断播放，内嵌播放器同步上游 v1.0.1（变速不跳转、不变调）并修复高清视频缩放的过度锐化；音频锁扩展到系统挂起，播放中不会因闲置断电掉蓝牙。注意：内嵌播放器插件（ffmpegplayer-plugin.zip）与 MathJax 渲染服务（mathjax-server.zip）不随 OTA 分发，需单独下载替换。",
+      "size": 4619111,
+      "download": "https://cdn.jsdelivr.net/gh/lyrecoul/penmods-ota@v2.4.1/update_v2.4.1.zip",
+      "md5": "7dd336e4bb662aa7714a8af1b80f7db4"
     }
   ]
 }
