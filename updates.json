@@ -45,10 +45,10 @@
     },
     {
       "version": [2, 5, 0],
-      "note": "2.5.0：修复设备环境缺失导致的两类静默失败。① 出厂 rootfs 没有可用的 CA 证书库，所有 HTTPS 请求（OTA 更新、AI 助手、插件联网、内嵌播放器的网络流）此前都会因 unable to get local issuer certificate 而失败；现在主库内嵌 Mozilla 根证书包，开机拆成 OpenSSL CApath 需要的文件名并 bind mount 到 /etc/ssl/certs，整机（本进程 Qt、内嵌 OpenSSL 3、curl/mpv 等子进程）同时生效，不写 rootfs、重启即还原。② 开机检查字体环境：/usr/share/fonts 指向 /usr/lib/fonts 的软链缺失或失效时自动补上，没有 fontconfig 字体清单缓存时在后台跑 fc-cache（首次约 40 秒，不阻塞界面），字幕与字体 fallback 不再为等字体卡顿。代价是主库体积增加约 186 KiB。数学公式渲染服务（mathjax-server.zip）与内嵌播放器插件仍不随 OTA 分发。",
-      "size": 10489209,
-      "download": "https://cdn.jsdelivr.net/gh/lyrecoul/penmods-ota@v2.5.0/update_v2.5.0.zip",
-      "md5": "52b23c8a4f11b9141b05c5528dbf8a55"
+      "note": "2.5.0：修复设备环境缺失导致的两类静默失败。① 出厂 rootfs 没有可用的 CA 证书库，所有 HTTPS 请求（OTA 更新、AI 助手、插件联网、内嵌播放器的网络流）此前都会因 unable to get local issuer certificate 而失败；现在主库内嵌 Mozilla 根证书包，开机拆成 OpenSSL CApath 需要的文件名并 bind mount 到 /etc/ssl/certs，整机（本进程 Qt、内嵌 OpenSSL 3、curl/mpv 等子进程）同时生效，不写 rootfs、重启即还原。② 开机检查字体环境：/usr/share/fonts 指向 /usr/lib/fonts 的软链缺失或失效时自动补上，没有 fontconfig 字体清单缓存时在后台跑 fc-cache（首次约 40 秒，不阻塞界面），字幕与字体 fallback 不再为等字体卡顿。代价是主库体积增加约 237 KiB（OTA 包仍然是 4.7 MB）。数学公式渲染服务（mathjax-server.zip）与内嵌播放器插件仍不随 OTA 分发。",
+      "size": 4747106,
+      "download": "https://cdn.jsdelivr.net/gh/lyrecoul/penmods-ota@v2.5.0-r1/update_v2.5.0-r1.zip",
+      "md5": "eedb70c0ff7f0d0a5fd96153f360d35d"
     }
   ]
 }
