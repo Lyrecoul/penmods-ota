@@ -49,6 +49,13 @@
       "size": 4747106,
       "download": "https://cdn.jsdelivr.net/gh/lyrecoul/penmods-ota@v2.5.0-r1/update_v2.5.0-r1.zip",
       "md5": "eedb70c0ff7f0d0a5fd96153f360d35d"
+    },
+    {
+      "version": [2, 5, 1],
+      "note": "2.5.1：AI 助手的联网搜索不再绑定 Tavily —— AI 助手页的「网络搜索 → 搜索服务」可在 Tavily / DeepSeek 之间切换，也可以直接关闭；结果条数可调，没单独填密钥时沿用模型密钥，旧的 Tavily 配置会自动迁移。修复非 mp3 音频（m4a、flac 等）暂停后无法再播放、离开播放页后播放键彻底失灵：喂给宿主的临时软链接此前会在切歌或离开播放页时被删掉，宿主随即判定文件不存在并重置播放器；现在链接整场会话保留，同名曲目互不干扰，万一丢了会自动重建并接着播。本次未改动内嵌播放器插件与 MathJax 渲染服务，无需单独更新。",
+      "size": 4761968,
+      "download": "https://cdn.jsdelivr.net/gh/lyrecoul/penmods-ota@v2.5.1/update_v2.5.1.zip",
+      "md5": "0be05691dc9f1f204db5dce845443995"
     }
   ]
 }
