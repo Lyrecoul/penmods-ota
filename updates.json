@@ -2,60 +2,103 @@
   "status": 200,
   "versions": [
     {
-      "version": [2, 0, 0],
+      "version": [
+        2,
+        0,
+        0
+      ],
       "note": "更新测试",
       "size": 1691570,
       "download": "https://cdn.jsdelivr.net/gh/lyrecoul/penmods-ota@v2.0.0/update_v2.0.0.zip",
       "md5": "acd6eb04fc8b4eb99dfabac02a463fb5"
     },
     {
-      "version": [2, 3, 0],
+      "version": [
+        2,
+        3,
+        0
+      ],
       "note": "全新 2.3.0 版本：AI 助手支持多模态附件、联网搜索与工具调用；新增键盘设置（Rime 输入法管理与紧凑布局）与语音输入；音乐播放与快捷面板增强；插件系统新增媒体会话 API。",
       "size": 3457691,
       "download": "https://cdn.jsdelivr.net/gh/lyrecoul/penmods-ota@v2.3.0/update_v2.3.0-r1.zip",
       "md5": "0be68431f19e8bfa117863a512fb4c07"
     },
     {
-      "version": [2, 3, 1],
+      "version": [
+        2,
+        3,
+        1
+      ],
       "note": "2.3.1 修复版：修复插件媒体会话的三个问题 —— end() 缺少属主校验（被接管的旧插件会误关新属主的会话）；C ABI 会话句柄因地址复用导致陈旧句柄仍然有效（改为整数令牌）；新增 onSessionRevoked 回调，让被接管的 C 插件能被通知。同时让 .loading 崩溃自愈覆盖整个插件初始化过程（init_plugin_with_hook_api / init_plugin_with_media_api 里的崩溃此前会无限重启并触发 recovery）。",
       "size": 3464446,
       "download": "https://cdn.jsdelivr.net/gh/lyrecoul/penmods-ota@v2.3.1/update_v2.3.1.zip",
       "md5": "7cd7105b08f1325fcb124247819a5816"
     },
     {
-      "version": [2, 3, 2],
+      "version": [
+        2,
+        3,
+        2
+      ],
       "note": "2.3.2：新增自建词典 —— 把做好的 .dat 容器放进 /userdisk/PenMods/dicts/，查词结果页最上方就会出现你自己的词典分区，支持发音与分词条浏览（更多设置 → 扫描查询 → 自定义词典），放入新词典无需重启；配套工具 tools/dict-probe 的说明文档已改为中文。",
       "size": 3490918,
       "download": "https://cdn.jsdelivr.net/gh/lyrecoul/penmods-ota@v2.3.2/update_v2.3.2.zip",
       "md5": "64e514933ff7a9fda8acf5c46ff02fd5"
     },
     {
-      "version": [2, 4, 0],
+      "version": [
+        2,
+        4,
+        0
+      ],
       "note": "2.4.0：内嵌 FFmpeg 播放器 —— 视频不再交给独立的 mpv 进程，而是画进 Qt 场景图，因此跟随左右手旋转、可以叠加画面内控件与 ASS/LRC 外挂字幕，并支持 Rockchip MPP 硬解与 DMA-BUF 零拷贝；更多设置 → 系统微调 → 实验性功能新增「VPU 硬件解码」开关（给 boot 里的设备树打补丁启用 VPU，可随时开关、出厂镜像自动备份）。顺带修复：插件未部署时视频页仍按老方式拉起 mpv。播放器插件本体（libffmpegplayerplugin.so，约 12MB）不随 OTA 分发，需要用 scripts/deploy_ffmpeg_player.sh 单独部署。",
       "size": 10155377,
       "download": "https://cdn.jsdelivr.net/gh/lyrecoul/penmods-ota@v2.4.0/update_v2.4.0.zip",
       "md5": "091de4016427721ed7081941ae9f08b0"
     },
     {
-      "version": [2, 4, 1],
+      "version": [
+        2,
+        4,
+        1
+      ],
       "note": "2.4.1 修复版：AI 助手公式渲染多项修复 —— 行内公式不再漏解析、大小统一、过长公式改为换行而不是整幅缩小、中文公式改用设备自带系统字体（不再随包分发字体）、缩放公式不再被裁掉两侧；只发图片不打字现在能发出去，编辑带图片的消息不再丢图，对话里的图片可以点开；播放器曲末自动切歌不再把播放页调回前台，扫描不再打断播放，内嵌播放器同步上游 v1.0.1（变速不跳转、不变调）并修复高清视频缩放的过度锐化；音频锁扩展到系统挂起，播放中不会因闲置断电掉蓝牙。注意：内嵌播放器插件（ffmpegplayer-plugin.zip）与 MathJax 渲染服务（mathjax-server.zip）不随 OTA 分发，需单独下载替换。",
       "size": 4619111,
       "download": "https://cdn.jsdelivr.net/gh/lyrecoul/penmods-ota@v2.4.1/update_v2.4.1.zip",
       "md5": "7dd336e4bb662aa7714a8af1b80f7db4"
     },
     {
-      "version": [2, 5, 0],
+      "version": [
+        2,
+        5,
+        0
+      ],
       "note": "2.5.0：修复设备环境缺失导致的两类静默失败。① 出厂 rootfs 没有可用的 CA 证书库，所有 HTTPS 请求（OTA 更新、AI 助手、插件联网、内嵌播放器的网络流）此前都会因 unable to get local issuer certificate 而失败；现在主库内嵌 Mozilla 根证书包，开机拆成 OpenSSL CApath 需要的文件名并 bind mount 到 /etc/ssl/certs，整机（本进程 Qt、内嵌 OpenSSL 3、curl/mpv 等子进程）同时生效，不写 rootfs、重启即还原。② 开机检查字体环境：/usr/share/fonts 指向 /usr/lib/fonts 的软链缺失或失效时自动补上，没有 fontconfig 字体清单缓存时在后台跑 fc-cache（首次约 40 秒，不阻塞界面），字幕与字体 fallback 不再为等字体卡顿。代价是主库体积增加约 237 KiB（OTA 包仍然是 4.7 MB）。数学公式渲染服务（mathjax-server.zip）与内嵌播放器插件仍不随 OTA 分发。",
       "size": 4747106,
       "download": "https://cdn.jsdelivr.net/gh/lyrecoul/penmods-ota@v2.5.0-r1/update_v2.5.0-r1.zip",
       "md5": "eedb70c0ff7f0d0a5fd96153f360d35d"
     },
     {
-      "version": [2, 5, 1],
+      "version": [
+        2,
+        5,
+        1
+      ],
       "note": "2.5.1：AI 助手的联网搜索不再绑定 Tavily —— AI 助手页的「网络搜索 → 搜索服务」可在 Tavily / DeepSeek 之间切换，也可以直接关闭；结果条数可调，没单独填密钥时沿用模型密钥，旧的 Tavily 配置会自动迁移。修复非 mp3 音频（m4a、flac 等）暂停后无法再播放、离开播放页后播放键彻底失灵：喂给宿主的临时软链接此前会在切歌或离开播放页时被删掉，宿主随即判定文件不存在并重置播放器；现在链接整场会话保留，同名曲目互不干扰，万一丢了会自动重建并接着播。本次未改动内嵌播放器插件与 MathJax 渲染服务，无需单独更新。",
       "size": 4761968,
       "download": "https://cdn.jsdelivr.net/gh/lyrecoul/penmods-ota@v2.5.1/update_v2.5.1.zip",
       "md5": "0be05691dc9f1f204db5dce845443995"
+    },
+    {
+      "version": [
+        2,
+        5,
+        5
+      ],
+      "note": "2.5.5：修复 AI 助手长回复阅读位置、公式渲染与工具调用生命周期；优化内嵌播放器缩放采样；触控注入器新增 flicktap 与 ASCII 文本输入；更新 CA 根证书并移除已被 Mozilla 吊销信任的 emSign 根证书。",
+      "size": 4817938,
+      "download": "https://cdn.jsdelivr.net/gh/lyrecoul/penmods-ota@v2.5.5/update_v2.5.5.zip",
+      "md5": "b29c5d23d46eeb0a5757816a1361da85"
     }
   ]
 }
