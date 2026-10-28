@@ -99,6 +99,17 @@
       "size": 4817938,
       "download": "https://cdn.jsdelivr.net/gh/lyrecoul/penmods-ota@v2.5.5/update_v2.5.5.zip",
       "md5": "b29c5d23d46eeb0a5757816a1361da85"
+    },
+    {
+      "version": [
+        2,
+        6,
+        0
+      ],
+      "note": "2.6.0：AI 助手新增模型编辑、多个独立附件、草稿合并与回退恢复、多选消息操作、服务重置与自动 Shell 模式；会话改为按需增量保存，统一界面配色与设置分组。支持 Type-C 与蓝牙耳机媒体键，内嵌视频接入快捷面板媒体控制，修复熄屏/挂起输入守护生命周期。新增截屏通道并改进页面转场。OTA 安装改为临时文件加重命名，避免覆盖运行中的共享库。播放器插件沿用 V2.5.5、MathJax 沿用 V2.4.1；实验性 PP-OCR 安装器有更新，需单独下载。",
+      "size": 5025218,
+      "download": "https://cdn.jsdelivr.net/gh/lyrecoul/penmods-ota@v2.6.0/update_v2.6.0.zip",
+      "md5": "7b7a981a1fccff218a59d94d7732691f"
     }
   ]
 }
