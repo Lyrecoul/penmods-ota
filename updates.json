@@ -110,6 +110,17 @@
       "size": 5025218,
       "download": "https://cdn.jsdelivr.net/gh/lyrecoul/penmods-ota@v2.6.0-r1/update_v2.6.0.zip",
       "md5": "7b7a981a1fccff218a59d94d7732691f"
+    },
+    {
+      "version": [
+        2,
+        6,
+        1
+      ],
+      "note": "2.6.1：OTA 支持镜像自动回退、自定义更新源与代理、缓存清单和取消检查；修复蓝牙配对记录重启后丢失；新增扬声器、模拟耳机、USB 数字耳机与蓝牙音频的独立音量上限及输出状态卡片，修复显示音量与实际混音器音量不同步。播放器、MathJax 和 PP-OCR 附件与 V2.6.0 相同，无需重复安装。",
+      "size": 5081102,
+      "download": "https://cdn.jsdelivr.net/gh/lyrecoul/penmods-ota@v2.6.1/update_v2.6.1.zip",
+      "md5": "ab34ca66736c7babcc509554e95e15cd"
     }
   ]
 }
