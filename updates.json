@@ -121,6 +121,17 @@
       "size": 5081102,
       "download": "https://cdn.jsdelivr.net/gh/lyrecoul/penmods-ota@v2.6.1/update_v2.6.1.zip",
       "md5": "ab34ca66736c7babcc509554e95e15cd"
+    },
+    {
+      "version": [
+        2,
+        6,
+        2
+      ],
+      "note": "2.6.2：AI 助手新增 Shell 执行模式和结构化工具详情，优化流式回复、消息动画与设置加载；查词页为分词添加下划线；修复语音输入图标模糊。播放器、MathJax 和 PP-OCR 附件已核对与 V2.6.1 相同，无需重复安装。",
+      "size": 5073156,
+      "download": "https://cdn.jsdelivr.net/gh/lyrecoul/penmods-ota@v2.6.2/update_v2.6.2.zip",
+      "md5": "4a8ac777a8d74c7fdc70d2ecb9185fa3"
     }
   ]
 }
