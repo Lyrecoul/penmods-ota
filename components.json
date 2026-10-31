@@ -1,0 +1,113 @@
+{
+  "schema": 1,
+  "components": [
+    {
+      "id": "core",
+      "name": "PenMods 主程序",
+      "versions": [
+        {
+          "arch": "aarch64",
+          "channel": "dev",
+          "download": "https://cdn.jsdelivr.net/gh/lyrecoul/penmods-ota@v2.7.0/core_v2.7.0.zip",
+          "health_protocol": 1,
+          "id": "core",
+          "md5": "776c355148531618f3a03c28f17fa8c0",
+          "model": "YDP02X",
+          "note": "统一软件更新中心：主程序与播放器、MathJax、PP-OCRv5 可独立下载安装；支持自动检查与逐项自动更新。先暂存，下次启动切换，启动验证失败自动回退。首次升级自动安装独立启动器；配置与聊天记录保留。",
+          "sha256": "0296998766136af9074dc23f13b803db92a142f85f547814351f552ce6422c94",
+          "size": 5204710,
+          "unpacked_size": 11525656,
+          "version": [
+            2,
+            7,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "player",
+      "name": "视频播放器",
+      "versions": [
+        {
+          "arch": "aarch64",
+          "channel": "dev",
+          "download": "https://github.com/Lyrecoul/PenMods/releases/download/V2.7.0/ffmpegplayer-plugin.zip",
+          "id": "player",
+          "model": "YDP02X",
+          "note": "内嵌视频播放器，保留缩放与字幕支持；安装后重启生效。",
+          "requires": {
+            "core": {
+              "max_exclusive": "3.0.0",
+              "min": "2.7.0"
+            }
+          },
+          "sha256": "2569ec3788c4cd35999ef0d753a6de2807cf113c0af656bf19f52d925632f612",
+          "size": 5798553,
+          "unpacked_size": 12566779,
+          "version": [
+            1,
+            0,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mathjax",
+      "name": "MathJax 公式渲染",
+      "versions": [
+        {
+          "arch": "aarch64",
+          "channel": "dev",
+          "download": "https://github.com/Lyrecoul/PenMods/releases/download/V2.7.0/mathjax-server.zip",
+          "id": "mathjax",
+          "model": "YDP02X",
+          "note": "本地数学公式渲染，renderer 3；需在 AI 助手设置中启用数学渲染。",
+          "requires": {
+            "core": {
+              "max_exclusive": "3.0.0",
+              "min": "2.7.0"
+            }
+          },
+          "sha256": "ac4097a6445e3f00c081cba63ce301474c15c6b951171b60723ffdebd2fa853a",
+          "size": 31682711,
+          "unpacked_size": 98442070,
+          "version": [
+            1,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ppocr",
+      "name": "PP-OCRv5 识别",
+      "versions": [
+        {
+          "arch": "aarch64",
+          "channel": "dev",
+          "download": "https://github.com/Lyrecoul/PenMods/releases/download/V2.7.0/ppocr-package.zip",
+          "id": "ppocr",
+          "model": "YDP02X",
+          "note": "实验性 PP-OCRv5 识别；安装后仍需在系统微调中手动启用。",
+          "requires": {
+            "core": {
+              "max_exclusive": "3.0.0",
+              "min": "2.7.0"
+            }
+          },
+          "sha256": "25d08f2332f195027f839d5785dd662ec3d298a8867636647156a9d57e34cfc5",
+          "size": 8302653,
+          "unpacked_size": 12317843,
+          "version": [
+            1,
+            0,
+            0
+          ]
+        }
+      ]
+    }
+  ]
+}
