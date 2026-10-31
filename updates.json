@@ -132,6 +132,17 @@
       "size": 5073156,
       "download": "https://cdn.jsdelivr.net/gh/lyrecoul/penmods-ota@v2.6.2/update_v2.6.2.zip",
       "md5": "4a8ac777a8d74c7fdc70d2ecb9185fa3"
+    },
+    {
+      "version": [
+        2,
+        6,
+        3
+      ],
+      "note": "2.6.3：音乐播放器新增在线歌词搜索、双语预览与保存，支持逐字歌词连续高亮及 LRC/YRC/明文 QRC/TTML 时间轴；改进歌词滚动、固定标题、长句跟随和触摸操作。文件管理导航更流畅，文本阅读共享公式渲染；修复耳机按键扫描阻塞界面及异步回调兼容性问题，调整快捷设置状态间距。",
+      "size": 5135403,
+      "download": "https://cdn.jsdelivr.net/gh/lyrecoul/penmods-ota@v2.6.3/update_v2.6.3.zip",
+      "md5": "ce9655b826fad707019e18793e0cef55"
     }
   ]
 }
